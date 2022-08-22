@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>BMI calculate</title>
+        <link rel="icon" type="image/x-icon" href="sfc.png">
+        <style>
+         
+            html
+                {
+                    background:url(Gym.png) 0 0 ;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            .head
+                {
+                    font-size: 50pt;
+                }
+            .cal
+                {
+                    background-color: #adbf39;
+                    width: 100px;
+                    border-radius: 5px;
+                }
+            .left
+                {
+
+                    width: 40%;
+                    float: left;
+                    font-size: 15pt;
+                    font: bold;
+                    background-color: white;
+
+                }
+
+            .right
+                {
+                    width: 60%;
+                    float: left;
+                    text-align: center;
+                }
+            ul  
+                {
+                    list-style-type: none;
+                    background-color:#eaf5a4;
+                }
+            li a
+                {
+                    display: block;
+                    text-decoration: none;
+                    padding: 8px 16px;
+                }
+          li a:hover
+                {
+                    background-color:#585c3e;
+                    color: white;
+                }
+            .head
+                {
+                    color: white;
+                }
+          
+            
+        
+           
+        </style>
+    </head>
+    <body>
+        <section class="left">
+            <div class="left1">
+                <h1 style="color: #adbf39;">Diet Plane & Workout Schedule based on BMI</h1>
+            </div>
+            <div class="bmiimg">
+                <img src="bmi.jpg" alt="Bmi" style="width:100%">
+            </div>
+            
+            <h2 style="color: #adbf39;text-align: center;">Please Click Your Body Condition</h2>
+            <ul>
+                <li><a href="w&du.html">Underweight</a></li>
+                <li><a href="w&do.html">Overweight</a></li>
+                <li><a href="w&do.html">Obese</a></li>
+            </ul>
+        </section>
+        
+        <section class="right">
+            <form name="techBMI">
+                <h3 class="head">BMI Calculator</h3><br/>
+                <input type="text" name="weight" placeholder="Enter Weight (kg)" size="30"><br /><br/>
+                <input type="text" name="height" placeholder="Enter Height (Meters)" size="30"><br /><br/>
+                <input class="cal" type="button" value="Calculate BMI" onClick="calculateBmi()"><br /><br/>
+                <input type="text" name="bmi" placeholder="Your BMI Will be here" size="20"><br /><br/>
+                <input type="text" name="meaning" size="35"><br /><br/>
+                <input class="cal" type="reset" value="Reset" /><br/>
+            </form>
+        </section>
+        
+
+
+        <script>
+                function calculateBmi() 
+                {
+                    var weight = document.techBMI.weight.value
+                    var height = document.techBMI.height.value
+                    if(weight > 0 && height > 0)
+                    {	
+                        var finalBmi = weight/(height*height)
+                        document.techBMI.bmi.value = finalBmi.toFixed(3);
+                        if(finalBmi < 18.5)
+                        {
+                            document.techBMI.meaning.value = "You are unhealthy, too thin."
+                        }
+                        else if(finalBmi > 18.5 && finalBmi < 25)
+                        {
+                            document.techBMI.meaning.value = "You are healthy enough."
+                        }
+                        else if(finalBmi > 25 &&  finalBmi <30)
+                        {
+                            document.techBMI.meaning.value = "You have overweight."
+                        }
+                        else if(finalBmi > 30)
+                        {
+                            document.techBMI.meaning.value = "Your condition is serious."
+                        }
+                    }
+                    
+                    else
+                    {
+                         alert("Data you've entered might be incorrect. Please check and try again.")
+                    }
+
+                }
+        </script>
+    </body>
+</html>

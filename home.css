@@ -1,0 +1,12 @@
+* {
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	background-image: url(home_background_image.jpg);
+	background-size: cover;
+	
+	background-position: cover;
+}

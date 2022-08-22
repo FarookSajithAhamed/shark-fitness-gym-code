@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif;
+	box-sizing: border-box;
+}
+
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background-color: #ddd;
+
+}
+
+.container{
+	width: 80%;
+	display:block;
+	margin: auto;
+	padding-top: 100px;
+
+
+}
+
+.content-section{
+	float: left;
+	width: 55%;
+}
+
+.image{
+	float: right;
+	width: 40%;
+}
+
+.image img{
+	width: 100%;
+	height: auto;
+}
+
+.content-section.title{
+	font-size: 28px;
+
+}
+
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+.content-section .button {
+	margin-top: 30px;
+
+}
+
+.content-section .content .button a{
+	background-color: #3d3d3d;
+	padding: 12px 40px;
+	color: #fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+}
+
+.content-section .content .button a:hover{
+	background-color: #a52a2a;
+	color: #fff;
+}
+
+.content-section .content .social {
+	margin-top: 40px;
+}
+
+.content-section .social i{
+	font-size: 30px;
+	color: #a52a2a;
+	padding: 0px 10px;
+}
+
+@media screen and (max-width:  768px){
+	.container{
+		width: 80%;
+		display: block;
+		margin: auto;
+		padding-top: 50px;
+	}
+	.content-section{
+		float: none;
+		width: 100%;
+		display: block;
+		margin: auto;
+	}
+
+	.image{
+		float: none;
+		width: 100%;
+		display: block;
+		margin: auto;
+	}
+	.content-section .title{
+		text-align: center;
+		font-size: 19px;
+	}
+
+	.content-section .content .button{
+		text-align: center;
+	}
+}
+
